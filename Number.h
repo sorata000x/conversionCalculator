@@ -1,6 +1,9 @@
+//
+// Created by Brandon Castro on 8/30/21.
+//
 
-#ifndef _NUMBER_H
-#define _NUMBER_H
+#ifndef LAB1_5_CS66_NUMBER_H
+#define LAB1_5_CS66_NUMBER_H
 #include <vector>
 #include <string>
 #include <utility>
@@ -23,11 +26,15 @@ public:
     base getBase() const;
     static std::string enumToString(int value);
     std::string getData() const;
+    static std::string check(std::string input);
 
     // used to get other data types to binary
     static std::string byteToHex(const std::string& input);
     static std::string hexToByte(char input);
     static std::string hexToBin(std::string input);
+
+    // decimal to binary
+    static std::string decToBin(const std::string& input);
 
     // used to get binary to other data types
     static std::string binToOct(std::string input);

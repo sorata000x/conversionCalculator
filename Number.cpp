@@ -1,4 +1,10 @@
+//
+// Created by Brandon Castro on 8/30/21.
+//
+
+
 #include "Number.h"
+
 #include <utility>
 
 Number::Number(Number::base type) : type(type) {}
@@ -82,10 +88,29 @@ Number::base Number::getBase() const
 
 std::string Number::getData() const {return data;}
 
-void Number::printOtherTypes()
+std::string Number::check(std::string input)
 {
     std::string hold;
 
+    int remainder = input.size()%4;
+    int add = 4-remainder;
+
+    if (remainder != 0)
+    {
+        for (int i = 0; i < add; i++)
+        {
+            hold += "0";
+        }
+    }
+    hold += input;
+
+    return hold;
+}
+
+void Number::printOtherTypes()
+{
+    std::string hold;
+    // convert hold into binary
     switch(type)
     {
         case NA : std::cout << "no data type" << std::endl;
@@ -93,15 +118,28 @@ void Number::printOtherTypes()
         case BINARY:
             hold = data;
             break;
+        case DECIMAL:
+            hold = decToBin(data);
+            break;
         default:
             hold = hexToBin(data);
             break;
     }
+    hold = check(hold);
 
     std::cout << "Binary: " << hold << std::endl;
     std::cout << "Decimal: " <<  binToDec(hold) << std::endl;
     std::cout << "Hex: " << binToHex(hold) << std::endl;
     std::cout << "Octal: " << binToOct(hold) << std::endl;
+}
+
+std::string Number::decToBin(const std::string& input)
+{
+    int n = std::stoi(input);
+    std::string r;
+    while(n!=0) {r=(n%2==0 ?"0":"1")+r; n/=2;}
+    return r;
+
 }
 
 std::string Number::byteToHex(const std::string& input)
