@@ -1,5 +1,5 @@
 # conversionCalculator
-## DESCRIPTION
+## Description
 Converting one of Decimal, Binary, Hex, Octal number input by the user to other three types of number.
 <br>
 Probably need also for the negative numbers (2's compliment)
@@ -11,7 +11,7 @@ Write a program in C++ that takes a number in any base (Decimal, Binary, Hex, Oc
 
 <br>
 
-## IMPLIMENTATION
+## Implimentation
 - Decimal to Binary
   - remainder method: devide decimal number by 2 until the quotient become 1, and store the remainder from end to the begining.
 - Decimal to Hex
@@ -45,5 +45,5 @@ Write a program in C++ that takes a number in any base (Decimal, Binary, Hex, Oc
 
 (hint: some function are reusable)
 
-## output
+## Output
 
