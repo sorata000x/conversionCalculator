@@ -12,52 +12,6 @@ Write a program in C++ that takes a number in any base (Decimal, Binary, Hex, Oc
 <br>
 
 ## IMPLIMENTATION
-
-Input method
-> partially implimented using iostream. Currently using vectors and std::string as storage for values
-
-Decimal to other types (Nathan)
-> Logic outlined but not complete. Needs to be integrated and cut up into smaller functions for easier debugging
-
-Other types to decimal (Mathtthew)
-> not implimented
-
-Binary to Hex 
-> not implimented
-
-Binary to Octo
-> not implimented
-
-Hex to Binary
-> not implimented
-
-Hex to Octo
-> not implimented
-
-Octo to Hex
-> not implimented
-
-<br>
-
-## The Output May Be Like
-<pre>
-What type of number do you want to convert? (Decimal/Binary/Hex/Octal)
-> Decimal
-
-Enter your number: 
-> 11
-
-Binary  1011
-Hex     B
-Octal   13
-</pre>
-
-## Topic
-how would you approach to these operation?
-- store user input
-  - approach 1: store in string first and convert to other types as needing
-
-(function)
 - Decimal to Binary
   - remainder method: devide decimal number by 2 until the quotient become 1, and store the remainder from end to the begining.
 - Decimal to Hex
@@ -90,3 +44,6 @@ how would you approach to these operation?
   - convert from 'octal to binary' then 'binary to hex'
 
 (hint: some function are reusable)
+
+##output
+
