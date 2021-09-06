@@ -46,4 +46,4 @@ Write a program in C++ that takes a number in any base (Decimal, Binary, Hex, Oc
 (hint: some function are reusable)
 
 ## Output
-
+![image](https://user-images.githubusercontent.com/70079892/132150158-3e6ebdf6-6f63-4e34-90ec-b18158d7f620.png)
