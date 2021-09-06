@@ -25,15 +25,9 @@ Write a program in C++ that takes a number in any base (Decimal, Binary, Hex, Oc
 - Octal to Decimal
   - Multiply the digit at position n by 8^n, and add all the values together (e.g. 243 -> 2\*8^2 + 4\*8^1 + 3*8^0)
 - Binary to Hex
-  - Approach#1
-    - convert each 4 bits to 1 digitc of Hex
-  - Approach#2
-    - 'binary to decimal' then 'decimal to hex'
+  - convert each 4 bits to 1 digitc of Hex
 - Binary to Octal
-  - Approach#1
-    - convert each 3 bits to 1 digitc of Octal
-  - Approach#2
-    - 'binary to decimal' then 'decimal to Octal' 
+  - convert each 3 bits to 1 digitc of Octal
 - Hex to Binary
   - convert each digit of hex to 4 bits of binary through 'decimal to binary'
 - Hex to Octal
