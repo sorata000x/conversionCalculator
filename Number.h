@@ -32,7 +32,8 @@ public:
     static std::string byteToHex(const std::string& input);
     static std::string hexToByte(char input);
     static std::string hexToBin(std::string input);
-
+    static std::string octalToByte(char input);
+    static std::string octalToBin(std::string input);
     // decimal to binary
     static std::string decToBin(const std::string& input);
 

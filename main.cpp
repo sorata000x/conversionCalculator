@@ -37,25 +37,39 @@ void check(std::string &input)
     input = hold;
 }
 
+
 int main() {
 
-    std::string type;
-    std::string number;
+    bool run = true;
 
-
-    std::cout << "Type Ex: Hex Decimal Binary Octal" << std::endl;
-    std::cout << "Enter number type: ";
-    std::cin >>  type;
-    std::cout << "Now enter the number: ";
-    std::cin >> number;
-    removeSpace(number);
-    if (Number::BINARY == Number::stringToBase(type))
+    while(run)
     {
-        check(number);
+        std::string type;
+        std::string number;
+        char key;
+
+        std::cout << "Type Ex: Hex Decimal Binary Octal" << std::endl;
+        std::cout << "Enter number type: ";
+        std::cin >>  type;
+        std::cout << "Now enter the number: ";
+        std::cin >> number;
+        removeSpace(number);
+        if (Number::BINARY == Number::stringToBase(type))
+        {
+            check(number);
+        }
+        Number test(type, number);
+        test.printOtherTypes();
+
+        std::cout << "Do you want to try again(ex: y / n): ";
+        std::cin >> key;
+
+        if (key == 'n')
+        {
+            run = false;
+        }
     }
-    std::cout << number << std::endl;
-    Number test(type, number);
-    test.printOtherTypes();
+
 
 
     return 0;
