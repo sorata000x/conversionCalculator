@@ -121,6 +121,9 @@ void Number::printOtherTypes()
         case DECIMAL:
             hold = decToBin(data);
             break;
+        case OCTAL:
+            hold = octalToBin(data);
+            break;
         default:
             hold = hexToBin(data);
             break;
@@ -191,6 +194,47 @@ std::string Number::hexToByte(char input)
     }
 
     return NULL;
+}
+
+std::string Number::hexToBin(std::string input) {
+
+    std::string bin;
+
+    for (int i = 0; i < input.size(); i++)
+    {
+        bin += hexToByte(input[i]);
+    }
+
+    return bin;
+}
+
+std::string Number::octalToByte(char input)
+{
+    switch(input)
+    {
+        case '0': return "000";
+        case '1': return "001";
+        case '2': return "010";
+        case '3': return "011";
+        case '4': return "100";
+        case '5': return "101";
+        case '6': return "110";
+        case '7': return "111";
+    }
+
+    return NULL;
+}
+
+std::string Number::octalToBin(std::string input) {
+
+    std::string bin;
+
+    for (int i = 0; i < input.size(); i++)
+    {
+        bin += octalToByte(input[i]);
+    }
+
+    return bin;
 }
 
 std::string Number::binToOct(std::string input) {
@@ -297,14 +341,3 @@ std::string Number::binToDec(std::string input) {
     return std::to_string(total);
 }
 
-std::string Number::hexToBin(std::string input) {
-
-    std::string bin;
-
-    for (int i = 0; i < input.size(); i++)
-    {
-        bin += hexToByte(input[i]);
-    }
-
-    return bin;
-}
